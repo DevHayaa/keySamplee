@@ -28,7 +28,7 @@
 //   );
 // }
 
-import Home from "@/components/customComponents/home/home";
+import Home from "./home/page";
 
 
 export default function Main() {
