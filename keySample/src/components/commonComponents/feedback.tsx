@@ -76,8 +76,8 @@ export default function TestimonialSlider() {
             />
             <h3 className="text-xl font-bold text-gray-800">{testimonials[current].name}</h3>
             <p className="text-sm text-gray-500">{testimonials[current].role}</p>
-            <p className="mt-4 text-gray-600 italic">"{testimonials[current].feedback}"</p>
-          </div>
+            <p className="mt-4 text-gray-600 italic">&ldquo;{testimonials[current].feedback}&rdquo;</p>
+            </div>
         </div>
 
         <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow-md">

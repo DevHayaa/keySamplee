@@ -1,5 +1,7 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from 'next/image';
+
 
 const services = [
   {
@@ -37,7 +39,14 @@ const Clients = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((service, index) => (
           <Card key={index} className="shadow-lg hover:shadow-2xl transition duration-300 text-center">
-            <img src={service.image} alt={service.title} className="w-full h-40 object-cover rounded-t-lg" />
+<div className="relative w-full h-40">
+  <Image
+    src={service.image}
+    alt={service.title}
+    fill
+    className="object-cover rounded-t-lg"
+  />
+</div>
             <CardContent>
               <h2 className="text-xl font-bold mb-2">{service.title}</h2>
               <p className="text-gray-600 text-sm">{service.description}</p>

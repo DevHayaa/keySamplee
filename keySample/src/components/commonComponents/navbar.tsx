@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
@@ -23,7 +24,7 @@ export function Navbar() {
   const rightLinks = links.slice(4, 8);
 
   return (
-    <nav className="bg-white shadow-md bg-[#0d203e]">
+    <nav className=" shadow-md bg-[#0d203e]">
       {/* Desktop Navbar */}
       <div className="container mx-auto flex items-center justify-center py-4 px-4">
         {/* Left links (desktop only) */}
@@ -37,9 +38,7 @@ export function Navbar() {
           ))}
         </div>
         {/* Center logo with minimal horizontal margin */}
-        <Link href="/">
-          <img src="/logo.png" alt="Logo" className="h-12 mx-2" />
-        </Link>
+          <Image src="/logo.png" alt="Logo" width={48} height={48} className="h-12 mx-2" />
         {/* Right links (desktop only) */}
         <div className="hidden md:flex items-center space-x-4">
           {rightLinks.map((link) => (
