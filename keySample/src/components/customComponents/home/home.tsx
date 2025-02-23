@@ -8,7 +8,6 @@ import HowWeWork from "@/components/commonComponents/mobile-convenience";
 import CircularGallery from "@/components/commonComponents/gallery";
 import Clients from "@/components/commonComponents/clients";
 import Financials from "@/components/commonComponents/financial";
-import FeedbackCard from "@/components/commonComponents/feedback-card";
 import TestimonialSlider from "@/components/commonComponents/feedback";
 import ContactUs from "@/components/commonComponents/contact";
 import Footer from "@/components/commonComponents/footer";
@@ -45,7 +44,6 @@ export default function FullScreenSlider() {
 
   return (
     <div className="w-screen h-screen overflow-y-auto overflow-x-hidden">
-      <Navbar />
       <Slider {...settings}>
         {overlayText.map((text, index) => (
          <div key={index} className="relative w-screen h-screen">
